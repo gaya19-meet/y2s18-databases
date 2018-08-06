@@ -9,10 +9,10 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 def add_article():
-	pass
+	
 
 def query_all_articles():
-	pass
+	
 
 def query_article_by_topic():
 	pass
