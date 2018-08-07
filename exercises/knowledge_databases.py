@@ -17,10 +17,10 @@ def add_article(topic,rating,title):
 	session.commit()
 
 def query_all_articles():
-	#knowledge = session.query(Knowledge).all()
-	#return knowledge
+	return session.query(Knowledge).all()
 
-print(query_all_articles())
+
+
 
 	
 
@@ -37,6 +37,6 @@ def edit_article_rating():
 	pass
 query_all_articles
 add_article("dance",9 , "dancing")
-# print(query_all_articles())
+print(query_all_articles())
 
 
