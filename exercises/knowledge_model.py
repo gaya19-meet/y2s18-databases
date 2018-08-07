@@ -13,23 +13,17 @@ class Knowledge(Base):
 	# The third column will be a string representing the 
 	# topic of the article. The last column will be
 	# an integer, representing your rating of the article.
-	__tablename__ = "Knowledge"
+	__tablename__ = "knowledge"
 	article_id = Column (Integer, primary_key = True)
 	topic = Column(String)
 	rating = Column(Integer)
 	title = Column(String)
-	message = Column(String)
-	subject = Column(String)
 	def __repr__(self):
-		return("primary_key:{}\n"
-			   "topic :{}\n"
-			   "title:{}\n"
-			   "rating:{}\n"\
-			   "message:{}\n").format( 
-			   self.article_id ,
+		return("If you want to learn about {}\n"
+			   ", you should look at the Wikipedia article called:{}\n"
+			   "We gave this article a rating of {} out of 10!\n").format(
 			   self.topic, 
 			   self.title ,
-			   self.rating,
-			   self.message)
-x = Knowledge(article_id = "1" , topic = "weather" , title = "rainbow" , rating = 9, message =  "If you want to learn about" )
+			   self.rating)
+x = Knowledge(article_id = 1 , topic = "weather" , title = "rainbow" , rating = 9)
 print (x)
